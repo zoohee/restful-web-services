@@ -3,6 +3,7 @@ package com.zoohee.myrestfulservice.controller;
 import com.zoohee.myrestfulservice.bean.User;
 import com.zoohee.myrestfulservice.dao.UserDaoService;
 import com.zoohee.myrestfulservice.exception.UserNotFoundException;
+import jakarta.validation.Valid;
 import java.net.URI;
 import java.util.List;
 import org.apache.coyote.Response;
@@ -40,7 +41,7 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
+    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
         User savedUser = service.save(user);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
