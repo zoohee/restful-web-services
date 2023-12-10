@@ -1,7 +1,7 @@
 package com.zoohee.myrestfulservice.bean;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 import java.util.Date;
@@ -11,6 +11,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 @JsonIgnoreProperties(value= {"password", "ssn"})
+@Schema(description = "사용자 상세 정보를 위한 도메인 객체")
 public class User {
     private Integer id;
 
