@@ -8,3 +8,14 @@ server:
 spirng:
   message:
     basename: messages
+
+#spring:
+#  application:
+#    name: user-service
+
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://127.0.0.1:8761/eureka
