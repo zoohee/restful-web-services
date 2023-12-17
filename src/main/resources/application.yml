@@ -5,9 +5,13 @@ server:
 #  level:
 #    org.springframework: debug
 
-spirng:
+spring:
   message:
     basename: messages
+#  security:
+#    user:
+#      name: username
+#      password: passw0rd
 
 #spring:
 #  application:
